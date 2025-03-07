@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <h1>Welcome to My C omponent</h1>
+    <h1>Welcome to My Component</h1>
   </div>
 </template>
 
