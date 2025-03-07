@@ -5,7 +5,6 @@
 <template>
   <div>
     <h1>Welcome to My Component</h1>
-    <MyComponent/>
   </div>
 </template>
 
