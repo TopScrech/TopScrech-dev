@@ -5,7 +5,7 @@
 <template>
   <div>
     <h1>Welcome to My Component</h1>
-    <p>This is a new Nuxt component.</p>
+    <MyComponent/>
   </div>
 </template>
 
