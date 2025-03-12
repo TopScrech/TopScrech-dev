@@ -14,6 +14,7 @@
             "name": "Device Specs",
             "bundleIdentifier": "dev.topscrech.Device-Specs",
             "developerName": "TopScrech",
+            "marketplaceID": "6624303981",
             "subtitle": "Device Specs explorer for the rest of us!",
             "localizedDescription": "Know your device inside and out with Device Specs! Discover detailed information about your device’s hardware.",
             "iconURL": "https://topscrech.dev/alt-store/Device Specs/icon.png",
@@ -23,10 +24,10 @@
             ],
             "versions": [
                 {
-                    "version": "2.1.3",
-                    "date": "2025-03-07T07:00:00-08:00",
-                    "size": 10000000,
-                    "downloadURL": "https://topscrech.dev/alt-store/Device Specs/myapp_v1.0.ipa",
+                    "version": "2.1.4",
+                    "date": "2025-03-09T22:05:28-08:00",
+                    "size": 23138477,
+                    "downloadURL": "https://topscrech.dev/alt-store/Device Specs/v2.1.4.zip",
                     "localizedDescription": "Initial release"
                 }
             ],
