@@ -13,8 +13,8 @@
         {
             "name": "Device Specs",
             "bundleIdentifier": "dev.topscrech.Device-Specs",
-            "developerName": "TopScrech",
             "marketplaceID": "6624303981",
+            "developerName": "TopScrech",
             "subtitle": "Device Specs explorer for the rest of us!",
             "localizedDescription": "Know your device inside and out with Device Specs! Discover detailed information about your device’s hardware.",
             "iconURL": "https://topscrech.dev/alt-store/Device Specs/icon.png",
@@ -27,7 +27,7 @@
                     "version": "2.1.4",
                     "buildVersion": "123",
                     "date": "2025-03-09T22:05:28-08:00",
-                    "size": 23138477,
+                    "size": 23233571,
                     "downloadURL": "https://topscrech.dev/alt-store/Device Specs/v2.1.4/manifest.json",
                     "localizedDescription": "Initial release",
                     "minOSVersion": "17.0"
