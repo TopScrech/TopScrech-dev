@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import MyComponent from '~/MyComponent.vue'
 import '~/main.css'
 </script>
 
 <template>
   <div class="theme">
-    <MyComponent/>
+    <NuxtPage/>
   </div>
 </template>
 
