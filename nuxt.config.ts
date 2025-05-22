@@ -14,4 +14,11 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css"],
   builder: "vite",
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
+    }
+  }
 });
