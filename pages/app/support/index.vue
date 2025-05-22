@@ -176,7 +176,7 @@ definePageMeta({
 
 // SEO
 useHead({
-  title: "Support - Get Help",
+  title: "Support",
   meta: [
     {
       name: "description",
