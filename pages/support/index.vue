@@ -37,11 +37,11 @@
         <div class="max-w-4xl mx-auto">
           <!-- Hero section -->
           <div class="text-center mb-20">
-            <h2
-              class="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent leading-tight mb-6"
-            >
-              How can I help you?
-            </h2>
+              <h2
+                class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+              >
+                How can I help you?
+              </h2>
             <p
               class="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed"
             >
@@ -79,12 +79,6 @@
 
           <!-- Contact options -->
           <div class="max-w-2xl mx-auto">
-            <h4
-              class="text-center text-lg font-medium text-gray-300 mb-8"
-            >
-              Get in touch
-            </h4>
-
             <div
               class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8"
             >
@@ -162,7 +156,8 @@
               class="p-6 rounded-2xl bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm ring-1 ring-white/10"
             >
               <p class="text-gray-400 text-sm leading-relaxed">
-                I typically respond within a few hours.
+                I typically respond within a few hours
+                <br>
                 For urgent matters, Telegram is the fastest way to reach me
               </p>
             </div>
