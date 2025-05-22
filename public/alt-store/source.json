@@ -17,10 +17,10 @@
             "developerName": "TopScrech",
             "subtitle": "Device Specs explorer for the rest of us!",
             "localizedDescription": "Know your device inside and out with Device Specs! Discover detailed information about your device’s hardware.",
-            "iconURL": "https://topscrech.dev/alt-store/Device Specs/icon.png",
+            "iconURL": "https://topscrech.dev/alt-store/DeviceSpecs/icon.png",
             "tintColor": "#DD9955",
             "screenshots": [
-                "https://topscrech.dev/alt-store/Device Specs/screenshot1.png"
+                "https://topscrech.dev/alt-store/DeviceSpecs/screenshot1.png"
             ],
             "versions": [
                 {
@@ -28,7 +28,7 @@
                     "buildVersion": "123",
                     "date": "2025-03-09T22:05:28-08:00",
                     "size": 23233571,
-                    "downloadURL": "https://topscrech.dev/alt-store/Device%20Specs/431edd26-e91f-47a6-bf20-7a27a68d88fb/manifest.json",
+                    "downloadURL": "https://topscrech.dev/alt-store/DeviceSpecs/431edd26-e91f-47a6-bf20-7a27a68d88fb/manifest.json",
                     "localizedDescription": "Initial release",
                     "minOSVersion": "17.0"
                 }
