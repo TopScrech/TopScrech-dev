@@ -1,16 +1,12 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>
-    <h1>Welcome to My Component</h1>
-  </div>
+    <h1 class="text-3xl font-bold underline">Vadim world!</h1>
 </template>
 
 <style scoped>
 div {
-  text-align: center;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
 </style>
