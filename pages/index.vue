@@ -274,8 +274,8 @@
                     class="backdrop-blur-xl bg-white/5 rounded-2xl p-6 border border-white/20"
                 >
                     <p class="text-white/70">
-                        &copy; {{ currentYear }} Sergei Saliukov. Building the
-                        future of mobile experiences
+                        &copy; {{ currentYear }} Sergei Saliukov.
+                        Building the future of mobile experiences
                     </p>
                 </div>
             </div>
