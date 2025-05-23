@@ -493,12 +493,8 @@ const customFrameworks = [
         icon: "SK",
         color: "#FF6B6B",
         technologies: [
-            "SwiftUI",
-            "UniformTypeIdentifiers",
-            "GameKit",
-            "UserNotifications",
-            "PhotosUI",
-            "Combine",
+          "Swift",
+          "SwiftUI"
         ],
     },
     {
@@ -528,7 +524,7 @@ const customFrameworks = [
     {
         name: "SafariCover",
         category: "Web",
-        description: "Easily open in-app Safari",
+        description: "Easily open in-app Safari browser",
         icon: "SC",
         color: "#FECA57",
         technologies: ["SafariServices", "SwiftUI"],
@@ -539,7 +535,9 @@ const customFrameworks = [
         description: "SwiftPermissions made better",
         icon: "SP",
         color: "#FF9FF3",
-        technologies: [],
+        technologies: [
+          "SwiftPermissions"
+        ],
     },
     {
         name: "HealthyKit",
