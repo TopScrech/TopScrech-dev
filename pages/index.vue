@@ -550,7 +550,7 @@ const customFrameworks = [
         technologies: ["HealthKit", "Foundation"],
     },
     {
-        name: "GamepadKit",
+        name: "GaypadKit",
         category: "Gaming",
         description: "Respond to gamepad controller input",
         icon: "GK",
