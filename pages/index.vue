@@ -293,12 +293,13 @@
 import { apps } from "./data/apps.js";
 import { frameworks } from "./data/frameworks.js";
 import { platforms } from "./data/platforms.js";
+
 import { currentYear } from "./data/currentYear.js";
+import { smoothScrollTo } from "./data/smoothScrollTo.js";
 
 import AppCard from "./AppCard.vue";
 import FrameworkCard from "./FrameworkCard.vue";
 import PlatformCard from "./PlatformCard.vue";
-import { smoothScrollTo } from "./data/smoothScrollTo.js";
 
 const startYear = 2023;
 const experienceYears = currentYear - startYear;
