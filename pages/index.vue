@@ -98,7 +98,7 @@
                 <div
                     v-for="app in apps"
                     :key="app.name"
-                    class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105"
+                    class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105 flex flex-col"
                 >
                     <div class="flex items-center mb-4">
                         <div
@@ -120,7 +120,7 @@
                             <p class="text-white/70">{{ app.category }}</p>
                         </div>
                     </div>
-                    <p class="text-white/80 mb-4">{{ app.description }}</p>
+                    <p class="text-white/80 mb-4 flex-grow">{{ app.description }}</p>
                     <div class="flex flex-wrap gap-2">
                         <span
                             v-for="tech in app.technologies"
@@ -153,7 +153,7 @@
                 <div
                     v-for="framework in customFrameworks"
                     :key="framework.name"
-                    class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105"
+                    class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105 flex flex-col"
                 >
                     <div class="flex items-center mb-4">
                         <div
@@ -173,7 +173,7 @@
                             </p>
                         </div>
                     </div>
-                    <p class="text-white/80 mb-4">
+                    <p class="text-white/80 mb-4 flex-grow">
                         {{ framework.description }}
                     </p>
                     <div class="flex flex-wrap gap-2">
