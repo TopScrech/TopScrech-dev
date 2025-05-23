@@ -306,7 +306,6 @@ const experienceYears = currentYear - startYear;
 </script>
 
 <style>
-/* Optional: Add CSS smooth scrolling as fallback */
 html {
     scroll-behavior: smooth;
 }
