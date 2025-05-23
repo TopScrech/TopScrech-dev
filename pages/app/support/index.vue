@@ -84,7 +84,7 @@
             >
               <!-- Email contact -->
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:topscrech@icloud.com"
                 class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 ring-1 ring-white/10 hover:ring-blue-500/30"
               >
                 <div
@@ -118,7 +118,7 @@
 
               <!-- Telegram contact -->
               <a
-                href="https://t.me/yourusername"
+                href="https://t.me/topscrech"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ring-1 ring-white/10 hover:ring-cyan-500/30"
@@ -143,7 +143,7 @@
                   <h5
                     class="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300"
                   >
-                    Telegram Chat
+                    Telegram
                   </h5>
                 </div>
               </a>
