@@ -462,7 +462,7 @@ const apps = [
         name: "DickPic",
         category: "Photography",
         description:
-            "Advanced image processing and manipulation tool with AI-powered features",
+            "Advanced image processing app for detecting sensitive images & videos",
         iconName: "dickpic",
         color: "#F59E0B",
         technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
