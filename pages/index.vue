@@ -120,7 +120,9 @@
                             <p class="text-white/70">{{ app.category }}</p>
                         </div>
                     </div>
-                    <p class="text-white/80 mb-4 flex-grow">{{ app.description }}</p>
+                    <p class="text-white/80 mb-4 flex-grow">
+                        {{ app.description }}
+                    </p>
                     <div class="flex flex-wrap gap-2">
                         <span
                             v-for="tech in app.technologies"
@@ -140,9 +142,7 @@
             class="container mx-auto px-6 py-16 relative z-10"
         >
             <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-white mb-4">
-                    My Libraries
-                </h3>
+                <h3 class="text-3xl font-bold text-white mb-4">My Libraries</h3>
                 <div
                     class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"
                 ></div>
@@ -280,44 +280,54 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Add this section to your existing template, replace or add to the Tech Stack section -->
         <section id="frameworks-grid" class="py-16 relative z-10">
-          <div class="container mx-auto px-6">
-            <div class="backdrop-blur-xl bg-white/5 rounded-3xl p-12 border border-white/20 shadow-2xl">
-              <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-white mb-4">
-                  Frameworks & Technologies
-                </h3>
-                <div class="w-24 h-1 bg-gradient-to-r from-orange-400 to-pink-400 mx-auto rounded-full"></div>
-              </div>
-              
-              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                <!-- Framework Cards -->
+            <div class="container mx-auto px-6">
                 <div
-                  v-for="framework in techFrameworks"
-                  :key="framework.name"
-                  class="backdrop-blur-lg bg-white/10 p-6 rounded-2xl border border-white/20 flex flex-col items-center text-center hover:shadow-2xl hover:bg-white/15 transition-all duration-300 shadow-lg group hover:scale-105"
+                    class="backdrop-blur-xl bg-white/5 rounded-3xl p-12 border border-white/20 shadow-2xl"
                 >
-                  <div 
-                    class="w-16 h-16 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 border group-hover:scale-110 transition-transform duration-300"
-                    :class="framework.bgColor"
-                    :style="{ borderColor: framework.borderColor }"
-                  >
-                    <div 
-                      class="w-8 h-8"
-                      :class="framework.iconColor"
-                      v-html="framework.icon"
-                    ></div>
-                  </div>
-                  <h3 class="font-bold text-white mb-1">{{ framework.name }}</h3>
-                  <p class="text-sm text-white/70">{{ framework.description }}</p>
+                    <div class="text-center mb-12">
+                        <h3 class="text-3xl font-bold text-white mb-4">
+                            Frameworks & Technologies
+                        </h3>
+                        <div
+                            class="w-24 h-1 bg-gradient-to-r from-orange-400 to-pink-400 mx-auto rounded-full"
+                        ></div>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+                    >
+                        <!-- Framework Cards -->
+                        <div
+                            v-for="framework in techFrameworks"
+                            :key="framework.name"
+                            class="backdrop-blur-lg bg-white/10 p-6 rounded-2xl border border-white/20 flex flex-col items-center text-center hover:shadow-2xl hover:bg-white/15 transition-all duration-300 shadow-lg group hover:scale-105"
+                        >
+                            <div
+                                class="w-16 h-16 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 border group-hover:scale-110 transition-transform duration-300"
+                                :class="framework.bgColor"
+                                :style="{ borderColor: framework.borderColor }"
+                            >
+                                <div
+                                    class="w-8 h-8"
+                                    :class="framework.iconColor"
+                                    v-html="framework.icon"
+                                ></div>
+                            </div>
+                            <h3 class="font-bold text-white mb-1">
+                                {{ framework.name }}
+                            </h3>
+                            <p class="text-sm text-white/70">
+                                {{ framework.description }}
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </section>
-        
+
         <!-- Contact Section -->
         <section
             id="contact"
@@ -334,8 +344,10 @@
                         class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full mb-8"
                     ></div>
                     <p class="text-xl text-white/80 mb-8">
-                        I'm always excited to work on new projects andcollaborate with talented developers.
-                        Whether you need a new app built from scratch or want to improve an existing one, let's talk!
+                        I'm always excited to work on new projects
+                        andcollaborate with talented developers. Whether you
+                        need a new app built from scratch or want to improve an
+                        existing one, let's talk!
                     </p>
                     <div class="flex justify-center space-x-2 flex-wrap gap-4">
                         <a
@@ -492,10 +504,7 @@ const customFrameworks = [
         description: "Taking Swift & SwiftUI a step further",
         icon: "SK",
         color: "#FF6B6B",
-        technologies: [
-          "Swift",
-          "SwiftUI"
-        ],
+        technologies: ["Swift", "SwiftUI"],
     },
     {
         name: "QuickLooking",
@@ -535,9 +544,7 @@ const customFrameworks = [
         description: "SwiftPermissions made better",
         icon: "SP",
         color: "#FF9FF3",
-        technologies: [
-          "SwiftPermissions"
-        ],
+        technologies: ["SwiftPermissions"],
     },
     {
         name: "HealthyKit",
@@ -585,89 +592,89 @@ const platforms = [
     "Android",
 ];
 const techFrameworks = [
-  {
-    name: "Swift",
-    description: "Primary language",
-    bgColor: "bg-orange-400/20",
-    borderColor: "rgba(251, 146, 60, 0.3)",
-    iconColor: "text-orange-400",
-    icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+    {
+        name: "Swift",
+        description: "Primary language",
+        bgColor: "bg-orange-400/20",
+        borderColor: "rgba(251, 146, 60, 0.3)",
+        iconColor: "text-orange-400",
+        icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
       <path d="M21.984 16.348c.056-.112.056-.224.112-.336 1.346-5.272-1.851-11.44-7.347-14.693 2.412 3.253 3.365 7.122 2.524 10.599-.056.28-.168.617-.28.897a5.173 5.173 0 0 1-.45-.28S11.104 9.17 5.273 3.282c-.169 0 3.14 4.71 6.841 8.58-1.738-1.01-6.673-4.542-9.758-7.403.337.617.842 1.234 1.346 1.851 2.58 3.309 5.945 7.346 9.98 10.43-2.86 1.74-6.842 1.851-10.88 0-1.01-.448-1.85-1.009-2.804-1.682 1.682 2.636 4.318 5.048 7.459 6.337 3.757 1.627 7.57 1.515 10.318 0h.057c.112-.056.224-.112.336-.224 1.346-.673 3.982-1.402 5.44 1.402.392.785.728 1.402.952 2.019.168.617.28 1.178.28 1.85-1.626-3.309-5.44-2.019-7.514-1.122Z" />
-    </svg>`
-  },
-  {
-    name: "SwiftUI",
-    description: "UI framework",
-    bgColor: "bg-blue-400/20",
-    borderColor: "rgba(96, 165, 250, 0.3)",
-    iconColor: "text-blue-400",
-    icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+    </svg>`,
+    },
+    {
+        name: "SwiftUI",
+        description: "UI framework",
+        bgColor: "bg-blue-400/20",
+        borderColor: "rgba(96, 165, 250, 0.3)",
+        iconColor: "text-blue-400",
+        icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
       <path d="M12.75 2.25h-1.5A2.25 2.25 0 0 0 9 4.5v15A2.25 2.25 0 0 0 11.25 21h1.5A2.25 2.25 0 0 0 15 18.75v-15a2.25 2.25 0 0 0-2.25-2.25Z" />
       <path d="M5.25 6.75h-1.5A2.25 2.25 0 0 0 1.5 9v7.5a2.25 2.25 0 0 0 2.25 2.25h1.5A2.25 2.25 0 0 0 7.5 16.5V9a2.25 2.25 0 0 0-2.25-2.25Z" />
       <path d="M20.25 6.75h-1.5A2.25 2.25 0 0 0 16.5 9v7.5a2.25 2.25 0 0 0 2.25 2.25h1.5A2.25 2.25 0 0 0 22.5 16.5V9a2.25 2.25 0 0 0-2.25-2.25Z" />
-    </svg>`
-  },
-  {
-    name: "Core Data",
-    description: "Data persistence",
-    bgColor: "bg-purple-400/20",
-    borderColor: "rgba(167, 139, 250, 0.3)",
-    iconColor: "text-purple-400",
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-8 h-8">
+    </svg>`,
+    },
+    {
+        name: "Core Data",
+        description: "Data persistence",
+        bgColor: "bg-purple-400/20",
+        borderColor: "rgba(167, 139, 250, 0.3)",
+        iconColor: "text-purple-400",
+        icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-8 h-8">
       <path d="M14.5 3.5h-5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h5a3 3 0 0 0 3-3v-11a3 3 0 0 0-3-3Z" />
       <path d="M9.5 8.5h5M9.5 11.5h5M9.5 14.5h3" />
-    </svg>`
-  },
-  {
-    name: "ARKit",
-    description: "Augmented reality",
-    bgColor: "bg-green-400/20",
-    borderColor: "rgba(74, 222, 128, 0.3)",
-    iconColor: "text-green-400",
-    icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+    </svg>`,
+    },
+    {
+        name: "ARKit",
+        description: "Augmented reality",
+        bgColor: "bg-green-400/20",
+        borderColor: "rgba(74, 222, 128, 0.3)",
+        iconColor: "text-green-400",
+        icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
-    </svg>`
-  },
-  {
-    name: "HealthKit",
-    description: "Health data",
-    bgColor: "bg-red-400/20",
-    borderColor: "rgba(248, 113, 113, 0.3)",
-    iconColor: "text-red-400",
-    icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+    </svg>`,
+    },
+    {
+        name: "HealthKit",
+        description: "Health data",
+        bgColor: "bg-red-400/20",
+        borderColor: "rgba(248, 113, 113, 0.3)",
+        iconColor: "text-red-400",
+        icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-    </svg>`
-  },
-  {
-    name: "Combine",
-    description: "Reactive programming",
-    bgColor: "bg-yellow-400/20",
-    borderColor: "rgba(250, 204, 21, 0.3)",
-    iconColor: "text-yellow-400",
-    icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+    </svg>`,
+    },
+    {
+        name: "Combine",
+        description: "Reactive programming",
+        bgColor: "bg-yellow-400/20",
+        borderColor: "rgba(250, 204, 21, 0.3)",
+        iconColor: "text-yellow-400",
+        icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
       <path d="M17.5 4.5c-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5-1.45 0-2.99.22-4.28.79C1.49 5.62 1 6.33 1 7.14v11.28c0 .81.49 1.52 1.22 1.85 1.3.57 2.84.79 4.28.79 1.95 0 4.05-.4 5.5-1.5 1.45 1.1 3.55 1.5 5.5 1.5 1.45 0 2.99-.22 4.28-.79.73-.33 1.22-1.04 1.22-1.85V7.14c0-.81-.49-1.52-1.22-1.85-1.3-.57-2.83-.79-4.28-.79z" />
-    </svg>`
-  },
-  {
-    name: "CloudKit",
-    description: "Cloud storage",
-    bgColor: "bg-indigo-400/20",
-    borderColor: "rgba(129, 140, 248, 0.3)",
-    iconColor: "text-indigo-400",
-    icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+    </svg>`,
+    },
+    {
+        name: "CloudKit",
+        description: "Cloud storage",
+        bgColor: "bg-indigo-400/20",
+        borderColor: "rgba(129, 140, 248, 0.3)",
+        iconColor: "text-indigo-400",
+        icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
       <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
-    </svg>`
-  },
-  {
-    name: "MapKit",
-    description: "Maps & location",
-    bgColor: "bg-pink-400/20",
-    borderColor: "rgba(244, 114, 182, 0.3)",
-    iconColor: "text-pink-400",
-    icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
+    </svg>`,
+    },
+    {
+        name: "MapKit",
+        description: "Maps & location",
+        bgColor: "bg-pink-400/20",
+        borderColor: "rgba(244, 114, 182, 0.3)",
+        iconColor: "text-pink-400",
+        icon: `<svg viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">
       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z" />
-    </svg>`
-  }
+    </svg>`,
+    },
 ];
 
 const currentYear = new Date().getFullYear();
