@@ -146,9 +146,9 @@
                 <h4 class="text-lg font-semibold text-white">Response Times</h4>
               </div>
               <p class="text-white/80 leading-relaxed">
-                I typically respond within a few hours during business days.
+                I typically respond within a few hours during business days
                 <br>
-                For urgent matters, Telegram is the fastest way to reach me.
+                For urgent matters, Telegram is the fastest way to reach me
               </p>
             </div>
           </div>
