@@ -75,8 +75,9 @@
                 <p class="text-xl text-white/80 mb-8 leading-relaxed">
                     Crafting beautiful, intuitive mobile experiences across all
                     Apple platforms. Specializing in SwiftUI and modern iOS
-                    development practices with over 3 years of experience
-                    building apps that users love
+                    development practices with over
+                    <u>{{ experienceYears }} years</u> of experience building
+                    apps that users love
                 </p>
                 <div class="flex justify-center space-x-4">
                     <a
@@ -306,6 +307,9 @@ import { currentYear } from "./data/currentYear.js";
 import AppCard from "./AppCard.vue";
 import FrameworkCard from "./FrameworkCard.vue";
 import { smoothScrollTo } from "./data/smoothScrollTo.js";
+
+const startYear = 2023;
+const experienceYears = currentYear - startYear;
 </script>
 
 <style>
