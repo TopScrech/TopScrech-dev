@@ -1,6 +1,7 @@
 <template>
   <div
     class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105 flex flex-col"
+    @mouseleave="handleMouseLeave"
   >
     <div class="flex items-center justify-between mb-4">
       <div class="flex items-center flex-1">
@@ -199,6 +200,12 @@ const toggleDropdown = () => {
 
 const closeDropdown = () => {
   isDropdownOpen.value = false;
+};
+
+const handleMouseLeave = () => {
+  if (isDropdownOpen.value) {
+    closeDropdown();
+  }
 };
 
 const handleClickOutside = (event) => {

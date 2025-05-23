@@ -11,7 +11,7 @@ export const frameworks = [
     {
         name: "QuickLooking",
         category: "Files",
-        description: "Multi-platform file viewer",
+        description: "Multi-platform wrapper around QuickLook for easier file viewing",
         icon: "QL",
         color: "#4ECDC4",
         technologies: ["SwiftUI", "QuickLook", "QuickLookUI"],
@@ -20,7 +20,7 @@ export const frameworks = [
     {
         name: "LaunchAtLogin",
         category: "macOS",
-        description: "Fork of LaunchAtLogin",
+        description: "Optimized fork of LaunchAtLogin",
         icon: "LL",
         color: "#45B7D1",
         technologies: ["ServiceManagement", "os.log"],

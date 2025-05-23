@@ -10,13 +10,13 @@ export const apps = [
       "WidgetKit",
       "Kingfisher",
       "Live Activity",
-      "Keychain",
+      "Keychain"
     ],
     downloads: {
       appStore: "1234567890",
-      altStore: "example.com/bisquit",
-      github: "TopScrech/Bisquit-Host",
-    },
+      altStore: "example.com/bisquit"
+      // github: "TopScrech/Bisquit-Host"
+    }
   },
   {
     name: "Device Specs",
@@ -34,7 +34,8 @@ export const apps = [
     ],
     downloads: {
       appStore: "1234567891",
-      github: "TopScrech/Device-Specs",
+      altStore: "topscrech.dev/alt-store"
+      // github: "TopScrech/Device-Specs"
     },
   },
   {
@@ -46,9 +47,9 @@ export const apps = [
     color: "#F59E0B",
     technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
     downloads: {
-      altStore: "mysite.com/dickpic",
-      github: "TopScrech/DickPic",
-    },
+      altStore: "topscrech.dev/alt-store",
+      github: "TopScrech/DickPic"
+    }
   },
   {
     name: "MC Stats",
@@ -63,12 +64,12 @@ export const apps = [
       "WidgetKit",
       "StoreKit",
       "Nuke",
-      "Network",
+      "Network"
     ],
     downloads: {
       appStore: "1234567892",
-      altStore: "cdn.example.com/mcstats",
-      github: "TopScrech/MC-Stats",
-    },
+      altStore: "topscrech.dev/alt-store",
+      github: "TopScrech/MC-Stats"
+    }
   },
 ];
