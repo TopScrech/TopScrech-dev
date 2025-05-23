@@ -112,58 +112,22 @@
               </div>
             </section>
             
-        <!-- Frameworks Section -->
-        <section
-            id="frameworks"
-            class="container mx-auto px-6 py-16 relative z-10"
-        >
-            <div class="text-center mb-12">
+            <!-- Frameworks Section -->
+            <section id="frameworks" class="container mx-auto px-6 py-16 relative z-10">
+              <div class="text-center mb-12">
                 <h3 class="text-3xl font-bold text-white mb-4">My Libraries</h3>
                 <div
-                    class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"
+                  class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"
                 ></div>
-            </div>
-            <div
-                class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
-            >
-                <div
-                    v-for="framework in customFrameworks"
-                    :key="framework.name"
-                    class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105 flex flex-col"
-                >
-                    <div class="flex items-center mb-4">
-                        <div
-                            class="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold text-white mr-4 backdrop-blur-sm border border-white/30 shadow-lg group-hover:scale-110 transition-transform duration-300"
-                            :style="{
-                                background: `linear-gradient(135deg, ${framework.color}80, ${framework.color}40)`,
-                            }"
-                        >
-                            {{ framework.icon }}
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-semibold text-white">
-                                {{ framework.name }}
-                            </h4>
-                            <p class="text-white/70">
-                                {{ framework.category }}
-                            </p>
-                        </div>
-                    </div>
-                    <p class="text-white/80 mb-4 flex-grow">
-                        {{ framework.description }}
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            v-for="tech in framework.technologies"
-                            :key="tech"
-                            class="backdrop-blur-sm bg-white/20 text-white/90 px-3 py-1 rounded-full text-sm border border-white/30 hover:bg-white/30 transition-colors duration-200"
-                        >
-                            {{ tech }}
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
+              </div>
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <FrameworkCard
+                  v-for="framework in customFrameworks"
+                  :key="framework.name"
+                  :framework="framework"
+                />
+              </div>
+            </section>
 
         <!-- Platforms Grid Section -->
         <section id="platforms" class="py-16 relative z-10">
@@ -328,6 +292,7 @@
 
 <script setup>
 import AppCard from "./AppCard.vue";
+import FrameworkCard from "./FrameworkCard.vue";
 
 const apps = [
   {
@@ -412,6 +377,7 @@ const customFrameworks = [
         icon: "SK",
         color: "#FF6B6B",
         technologies: ["Swift", "SwiftUI"],
+        link: "TopScrech/ScrechKit"
     },
     {
         name: "QuickLooking",
@@ -420,6 +386,7 @@ const customFrameworks = [
         icon: "QL",
         color: "#4ECDC4",
         technologies: ["SwiftUI", "QuickLook", "QuickLookUI"],
+        link: "TopScrech/QuickLooking"
     },
     {
         name: "LaunchAtLogin",
@@ -428,6 +395,7 @@ const customFrameworks = [
         icon: "LL",
         color: "#45B7D1",
         technologies: ["ServiceManagement", "os.log"],
+        link: "TopScrech/LaunchAtLogin"
     },
     {
         name: "MailCover",
@@ -436,6 +404,7 @@ const customFrameworks = [
         icon: "MC",
         color: "#96CEB4",
         technologies: ["SwiftUI", "MessageUI"],
+        link: "TopScrech/MailCover"
     },
     {
         name: "SafariCover",
@@ -444,6 +413,7 @@ const customFrameworks = [
         icon: "SC",
         color: "#FECA57",
         technologies: ["SafariServices", "SwiftUI"],
+        link: "TopScrech/SafariCover"
     },
     {
         name: "SPerms",
@@ -452,6 +422,7 @@ const customFrameworks = [
         icon: "SP",
         color: "#FF9FF3",
         technologies: ["SwiftPermissions"],
+        link: "TopScrech/SPerms"
     },
     {
         name: "HealthyKit",
@@ -460,6 +431,7 @@ const customFrameworks = [
         icon: "HK",
         color: "#54A0FF",
         technologies: ["HealthKit", "Foundation"],
+        link: "TopScrech/HealthyKit"
     },
     {
         name: "GaypadKit",
@@ -468,6 +440,7 @@ const customFrameworks = [
         icon: "GK",
         color: "#5F27CD",
         technologies: ["GameController", "Combine"],
+        link: "TopScrech/GaypadKit"
     },
     {
         name: "Audio Visualizer",
@@ -476,6 +449,7 @@ const customFrameworks = [
         icon: "AV",
         color: "#00D2D3",
         technologies: ["Charts", "AVFoundation", "Accelerate"],
+        link: "TopScrech/Audio-Visualizer"
     },
 ];
 
