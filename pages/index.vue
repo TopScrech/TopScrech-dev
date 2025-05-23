@@ -16,14 +16,20 @@
         </div>
 
         <!-- Header -->
-        <header class="container mx-auto px-4 sm:px-6 py-4 sm:py-8 relative z-10">
+        <header
+            class="container mx-auto px-4 sm:px-6 py-4 sm:py-8 relative z-10"
+        >
             <nav
                 class="flex flex-col sm:flex-row justify-between items-center backdrop-blur-xl bg-white/10 rounded-2xl p-4 border border-white/20 shadow-2xl gap-4 sm:gap-0"
             >
-                <h1 class="text-xl sm:text-2xl font-bold text-white text-center sm:text-left">
+                <h1
+                    class="text-xl sm:text-2xl font-bold text-white text-center sm:text-left"
+                >
                     Sergei Saliukov
                 </h1>
-                <div class="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-6">
+                <div
+                    class="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-6"
+                >
                     <a
                         href="#apps"
                         @click="smoothScrollTo($event, 'apps')"
@@ -262,9 +268,7 @@
                         new app built from scratch or want to improve an
                         existing one, let's talk!
                     </p>
-                    <div
-                        class="flex justify-center space-x-2 flex-wrap gap-4"
-                    >
+                    <div class="flex justify-center space-x-2 flex-wrap gap-4">
                         <a
                             href="https://linkedin.com/in/topscrech"
                             target="_blank"
