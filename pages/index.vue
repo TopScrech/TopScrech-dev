@@ -2,7 +2,7 @@
     <div
         class="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden"
     >
-        <!-- Background decorative elements -->
+        <!-- Background -->
         <div class="absolute inset-0 overflow-hidden">
             <div
                 class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
@@ -269,14 +269,20 @@
 
         <!-- Footer -->
         <footer class="py-8 relative z-10">
-            <div class="container mx-auto px-6 text-center">
+            <div class="container mx-auto px-6">
                 <div
-                    class="backdrop-blur-xl bg-white/5 rounded-2xl p-6 border border-white/20"
+                    class="backdrop-blur-xl bg-white/5 rounded-2xl p-6 border border-white/20 flex justify-between items-center"
                 >
                     <p class="text-white/70">
                         &copy; {{ currentYear }} Sergei Saliukov.
                         Building the future of mobile experiences
                     </p>
+                    <a 
+                        href="/app/support" 
+                        class="text-gray-400 hover:text-cyan-300 transition-colors duration-200"
+                    >
+                        App Support
+                    </a>
                 </div>
             </div>
         </footer>
