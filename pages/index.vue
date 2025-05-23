@@ -24,24 +24,28 @@
                 <div class="flex space-x-6">
                     <a
                         href="#apps"
+                        @click="smoothScrollTo($event, 'apps')"
                         class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
                     >
                         Apps
                     </a>
                     <a
                         href="#frameworks"
+                        @click="smoothScrollTo($event, 'frameworks')"
                         class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
                     >
                         Frameworks
                     </a>
                     <a
                         href="#tech"
+                        @click="smoothScrollTo($event, 'tech')"
                         class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
                     >
                         Tech Stack
                     </a>
                     <a
                         href="#contact"
+                        @click="smoothScrollTo($event, 'contact')"
                         class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
                     >
                         Contact
@@ -69,12 +73,14 @@
                 <div class="flex justify-center space-x-4">
                     <a
                         href="#apps"
+                        @click="smoothScrollTo($event, 'apps')"
                         class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
                     >
                         View My Work
                     </a>
                     <a
                         href="#contact"
+                        @click="smoothScrollTo($event, 'contact')"
                         class="backdrop-blur-xl bg-white/10 border border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
                     >
                         Get In Touch
@@ -82,6 +88,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Apps Section -->
         <section id="apps" class="container mx-auto px-6 py-16 relative z-10">
             <div class="text-center mb-12">
@@ -281,7 +288,7 @@
             </div>
         </section>
 
-        <!-- Add this section to your existing template, replace or add to the Tech Stack section -->
+        <!-- Frameworks Grid Section -->
         <section id="frameworks-grid" class="py-16 relative z-10">
             <div class="container mx-auto px-6">
                 <div
@@ -295,7 +302,6 @@
                             class="w-24 h-1 bg-gradient-to-r from-orange-400 to-pink-400 mx-auto rounded-full"
                         ></div>
                     </div>
-
                     <div
                         class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
                     >
@@ -344,14 +350,18 @@
                         class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full mb-8"
                     ></div>
                     <p class="text-xl text-white/80 mb-8">
-                        I'm always excited to work on new projects
-                        andcollaborate with talented developers. Whether you
-                        need a new app built from scratch or want to improve an
+                        I'm always excited to work on new projects and
+                        collaborate with talented developers. Whether you need a
+                        new app built from scratch or want to improve an
                         existing one, let's talk!
                     </p>
-                    <div class="flex justify-center space-x-2 flex-wrap gap-4">
+                    <div
+                        class="flex justify-center space-x-2 flex-wrap gap-4"
+                    >
                         <a
                             href="https://linkedin.com/in/topscrech"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 px-4 py-3 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105"
                         >
                             <svg
@@ -369,6 +379,8 @@
                         </a>
                         <a
                             href="https://github.com/TopScrech"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 px-4 py-3 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105"
                         >
                             <svg
@@ -386,6 +398,8 @@
                         </a>
                         <a
                             href="https://t.me/TopScrech"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 px-4 py-3 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105"
                         >
                             <svg
@@ -401,10 +415,12 @@
                         </a>
                         <a
                             href="mailto:topscrech@icloud.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 px-4 py-3 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105"
                         >
                             <svg
-                                class="w- h-5"
+                                class="w-5 h-5"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                             >
@@ -591,6 +607,7 @@ const platforms = [
     "Web",
     "Android",
 ];
+
 const techFrameworks = [
     {
         name: "Swift",
@@ -678,4 +695,39 @@ const techFrameworks = [
 ];
 
 const currentYear = new Date().getFullYear();
+
+// Smooth scroll function
+const smoothScrollTo = (event, targetId) => {
+    event.preventDefault();
+
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest",
+        });
+    }
+};
 </script>
+
+<style>
+/* Optional: Add CSS smooth scrolling as fallback */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Ensure smooth scrolling works even with CSS-only approach */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* For users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+</style>
