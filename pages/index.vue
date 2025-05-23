@@ -155,26 +155,11 @@
                         class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
                     >
                         <!-- Platform Cards -->
-                        <div
+                        <PlatformCard
                             v-for="platform in platforms"
                             :key="platform.name"
-                            class="backdrop-blur-lg bg-white/10 p-6 rounded-2xl border border-white/20 flex flex-col items-center text-center hover:shadow-2xl hover:bg-white/15 transition-all duration-300 shadow-lg group hover:scale-105"
-                        >
-                            <div
-                                class="w-16 h-16 backdrop-blur-sm rounded-full flex items-center justify-center mb-4 border group-hover:scale-110 transition-transform duration-300"
-                                :class="platform.bgColor"
-                                :style="{ borderColor: platform.borderColor }"
-                            >
-                                <div
-                                    class="w-8 h-8"
-                                    :class="platform.iconColor"
-                                    v-html="platform.icon"
-                                ></div>
-                            </div>
-                            <h3 class="font-bold text-white">
-                                {{ platform.name }}
-                            </h3>
-                        </div>
+                            :platform="platform"
+                        />
                     </div>
                 </div>
             </div>
@@ -306,6 +291,7 @@ import { currentYear } from "./data/currentYear.js";
 
 import AppCard from "./AppCard.vue";
 import FrameworkCard from "./FrameworkCard.vue";
+import PlatformCard from "./PlatformCard.vue";
 import { smoothScrollTo } from "./data/smoothScrollTo.js";
 
 const startYear = 2023;
