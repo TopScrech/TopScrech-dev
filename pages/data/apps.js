@@ -4,7 +4,6 @@ export const apps = [
     category: "Pterodactyl Client",
     description: "A powerful server management tool for Pterodactyl panel",
     iconName: "bisquit-host",
-    color: "#3B82F6",
     technologies: [
       "SwiftData",
       "WidgetKit",
@@ -13,8 +12,8 @@ export const apps = [
       "Keychain"
     ],
     downloads: {
-      appStore: "1234567890",
-      altStore: "example.com/bisquit"
+      appStore: 1234567890,
+      // altStore: true,
       // github: "TopScrech/Bisquit-Host"
     }
   },
@@ -24,7 +23,6 @@ export const apps = [
     description:
       "Comprehensive device information app showing detailed hardware and software specifications",
     iconName: "device-specs",
-    color: "#10B981",
     technologies: [
       "CoreNFC",
       "NearbyInteraction",
@@ -33,8 +31,8 @@ export const apps = [
       "Core Location",
     ],
     downloads: {
-      appStore: "1234567891",
-      altStore: "topscrech.dev/alt-store"
+      appStore: 1234567891,
+      altStore: true,
       // github: "TopScrech/Device-Specs"
     },
   },
@@ -44,10 +42,9 @@ export const apps = [
     description:
       "Advanced image processing app for detecting sensitive images & videos",
     iconName: "dickpic",
-    color: "#F59E0B",
     technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
     downloads: {
-      altStore: "topscrech.dev/alt-store",
+      // altStore: true,
       github: "TopScrech/DickPic"
     }
   },
@@ -57,7 +54,6 @@ export const apps = [
     description:
       "Minecraft server statistics tracker with real-time player monitoring and analytics",
     iconName: "mc-stats",
-    color: "#8B5CF6",
     technologies: [
       "SwiftData",
       "Charts",
@@ -67,9 +63,86 @@ export const apps = [
       "Network"
     ],
     downloads: {
-      appStore: "1234567892",
-      altStore: "topscrech.dev/alt-store",
+      appStore: 1234567892,
+      // altStore: true,
       github: "TopScrech/MC-Stats"
+    }
+  },
+  {
+    name: "CI/CD",
+    category: "Dev Tools",
+    description:
+      "Xcode Cloud manager",
+    iconName: "ci-cd",
+    technologies: [
+      "SwiftData",
+      "Kingfisher"
+    ],
+    downloads: {
+      appStore: 6746098668,
+      // altStore: true,
+      // github: "TopScrech/CI-CD"
+    }
+  },
+  {
+    name: "Disk Usage Widgets",
+    category: "Utilities",
+    description:
+      "Monitor disk usage on your Mac",
+    iconName: "disk-usage",
+    technologies: [
+      "WidgetKit",
+      "Charts",
+      "LaunchAtLogin"
+    ],
+    downloads: {
+      appStore: 6504800979,
+      // github: "TopScrech/Disk-Usage-Widgets"
+    }
+  },
+  {
+    name: "Pro Battery",
+    category: "Utilities",
+    description:
+      "Monitor battery usage on your Mac",
+    iconName: "pro-battery",
+    technologies: [
+      "WidgetKit",
+      "IOKit.ps"
+    ],
+    downloads: {
+      appStore: 6736841839,
+      // github: "TopScrech/Pro-Battery"
+    }
+  },
+  {
+    name: "Ram Usage",
+    category: "Utilities",
+    description:
+      "Monitor RAM usage on your Mac",
+    iconName: "ram-usage",
+    technologies: [
+      "WidgetKit",
+      "LaunchAtLogin"
+    ],
+    downloads: {
+      appStore: 6636466492,
+      // github: "TopScrech/Ram-Usage"
+    }
+  },
+  {
+    name: "XProj",
+    category: "Dev Tools",
+    description:
+      "Manage your Xcode projects",
+    iconName: "xproj",
+    technologies: [
+      "WidgetKit",
+      "LaunchAtLogin"
+    ],
+    downloads: {
+      appStore: 6502962295,
+      // github: "TopScrech/XProj"
     }
   },
 ];

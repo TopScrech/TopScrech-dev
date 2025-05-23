@@ -7,9 +7,6 @@
       <div class="flex items-center flex-1">
         <div
           class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden"
-          :style="{
-            background: `linear-gradient(135deg, ${app.color}80, ${app.color}40)`,
-          }"
         >
           <img
             :src="`/icons/${app.iconName}.webp`"
@@ -159,7 +156,6 @@ const props = defineProps({
         typeof app.category === "string" &&
         typeof app.description === "string" &&
         typeof app.iconName === "string" &&
-        typeof app.color === "string" &&
         Array.isArray(app.technologies)
       );
     },
@@ -184,7 +180,7 @@ const appStoreUrl = computed(() => {
 
 const altStoreUrl = computed(() => {
   return props.app.downloads?.altStore
-    ? `altstore://source?url=https://${props.app.downloads.altStore}/source.json`
+    ? `altstore://source?url=https://topscrech.dev/alt-store/source.json`
     : "";
 });
 
