@@ -8,10 +8,10 @@
       :href="`https://github.com/${framework.link}`"
       target="_blank"
       rel="noopener noreferrer"
-      class="absolute top-4 right-4 text-white p-2 rounded-lg transition-all duration-200 flex items-center gap-1 hover:scale-105 z-10"
+      class="absolute top-4 right-4 text-white p-3 rounded-lg transition-all duration-200 flex items-center gap-1 hover:scale-105 z-10"
     >
       <svg
-        class="w-4 h-4"
+        class="w-6 h-6"
         fill="currentColor"
         viewBox="0 0 24 24"
       >
