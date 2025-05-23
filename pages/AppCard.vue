@@ -214,11 +214,19 @@ const handleClickOutside = (event) => {
   }
 };
 
+const handleScroll = () => {
+  if (isDropdownOpen.value) {
+    closeDropdown();
+  }
+};
+
 onMounted(() => {
   document.addEventListener("click", handleClickOutside);
+  window.addEventListener("scroll", handleScroll);
 });
 
 onUnmounted(() => {
   document.removeEventListener("click", handleClickOutside);
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
