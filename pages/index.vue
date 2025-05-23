@@ -334,30 +334,10 @@
                         class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 mx-auto rounded-full mb-8"
                     ></div>
                     <p class="text-xl text-white/80 mb-8">
-                        I'm always excited to work on new projects and
-                        collaborate with talented teams. Whether you need a new
-                        app built from scratch or want to improve an existing
-                        one, let's talk!
+                        I'm always excited to work on new projects andcollaborate with talented developers.
+                        Whether you need a new app built from scratch or want to improve an existing one, let's talk!
                     </p>
-                    <div class="flex justify-center space-x-4 flex-wrap gap-4">
-                        <a
-                            href="mailto:topscrech@icloud.com"
-                            class="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 px-4 py-3 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105"
-                        >
-                            <svg
-                                class="w-5 h-5"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                            >
-                                <path
-                                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
-                                ></path>
-                                <path
-                                    d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-                                ></path>
-                            </svg>
-                            <span>Email</span>
-                        </a>
+                    <div class="flex justify-center space-x-2 flex-wrap gap-4">
                         <a
                             href="https://linkedin.com/in/topscrech"
                             class="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 px-4 py-3 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105"
@@ -406,6 +386,24 @@
                                 />
                             </svg>
                             <span>Telegram</span>
+                        </a>
+                        <a
+                            href="mailto:topscrech@icloud.com"
+                            class="flex items-center space-x-2 text-white/80 hover:text-white transition-all duration-300 backdrop-blur-sm bg-white/10 px-4 py-3 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-105"
+                        >
+                            <svg
+                                class="w- h-5"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                                ></path>
+                                <path
+                                    d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                                ></path>
+                            </svg>
+                            <span>E-mail</span>
                         </a>
                     </div>
                 </div>
