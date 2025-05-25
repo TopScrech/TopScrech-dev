@@ -17,7 +17,7 @@ defineProps({
             :style="{ borderColor: platform.borderColor }"
         >
             <div
-                class="w-8 h-8"
+                class="w-8 h-8 brightness-150"
                 :class="platform.iconColor"
                 v-html="platform.icon"
             ></div>
