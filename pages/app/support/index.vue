@@ -94,7 +94,7 @@
                 </div>
                 <div>
                   <h4 class="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors duration-300">
-                    Email Support
+                    Email
                   </h4>
                   <p class="text-white/70">topscrech@icloud.com</p>
                 </div>
