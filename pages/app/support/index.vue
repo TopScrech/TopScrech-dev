@@ -46,6 +46,10 @@
                     src="/sergei.webp"
                     alt="Sergei Saliukov"
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    width="192"
+                    height="192"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -101,7 +105,7 @@
               </div>
               <p class="text-white/80">
                 Perfect for detailed questions, bug reports, or business inquiries. 
-                I'll get back to you within 24 hours.
+                I'll get back to you within 24 hours
               </p>
             </a>
 
