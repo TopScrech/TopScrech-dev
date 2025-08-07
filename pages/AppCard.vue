@@ -12,10 +12,6 @@
             :src="`/icons/${app.iconName}.webp`"
             :alt="`${app.name} icon`"
             class=""
-            width="64"
-            height="64"
-            loading="lazy"
-            decoding="async"
           />
         </div>
         <div class="flex-1">
