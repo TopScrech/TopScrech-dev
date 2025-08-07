@@ -134,7 +134,7 @@ export const apps = [
     name: "XProj",
     category: "Dev Tools",
     description:
-      "Manage your Xcode projects",
+      "Organize your Xcode projects",
     iconName: "xproj",
     technologies: [
       "WidgetKit",
