@@ -1,0 +1,9 @@
+providers = ["..."]
+
+[phases.setup]
+nixPkgs = ["...", "bun"]
+
+[variables]
+NIXPACKS_NODE_VERSION = "22"
+
+
