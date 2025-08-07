@@ -23,7 +23,7 @@
       </div>
 
       <!-- Download Button with Dropdown -->
-      <div class="relative" v-if="hasDownloadLinks">
+      <div class="relative self-start" v-if="hasDownloadLinks">
         <button
           @click="toggleDropdown"
           class="backdrop-blur-sm bg-white/20 hover:bg-white/30 text-white p-2 rounded-lg transition-all duration-200 border border-white/30 flex items-center gap-1"

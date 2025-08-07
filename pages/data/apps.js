@@ -2,7 +2,7 @@ export const apps = [
   {
     name: "Bisquit.Host",
     category: "Pterodactyl Client",
-    description: "A powerful server management tool for Pterodactyl panel",
+    description: "Powerful server management tool for Pterodactyl panel",
     iconName: "bisquit-host",
     technologies: [
       "SwiftData",
@@ -40,7 +40,7 @@ export const apps = [
     name: "DickPic",
     category: "Photography",
     description:
-      "Advanced image processing app for detecting sensitive images & videos",
+      "Advanced image processing app for detecting sensitive images & videos in your media library",
     iconName: "dickpic",
     technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
     downloads: {
