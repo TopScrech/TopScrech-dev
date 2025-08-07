@@ -101,7 +101,7 @@
               </div>
               <p class="text-white/80">
                 Perfect for detailed questions, bug reports, or business inquiries. 
-                I'll get back to you within 24 hours.
+                I'll get back to you within 24 hours
               </p>
             </a>
 
@@ -160,7 +160,7 @@
         <div class="container mx-auto px-6 text-center">
           <div class="backdrop-blur-xl bg-white/5 rounded-2xl p-6 border border-white/20">
             <p class="text-white/70">
-              &copy; {{ currentYear }} Sergei Saliukov. Here to help with your iOS development needs
+              &copy; {{ currentYear }} Sergei Saliukov. Here to help with your iOS projects
             </p>
           </div>
         </div>
@@ -181,7 +181,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "Get personalized support and answers to your questions about iOS development and my apps.",
+      content: "Get personalized support and answers to your questions about iOS development and my apps",
     },
   ],
 });
