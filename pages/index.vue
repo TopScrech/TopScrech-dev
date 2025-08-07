@@ -17,44 +17,44 @@
 
         <!-- Header -->
         <header
-            class="container mx-auto px-4 sm:px-6 py-4 sm:py-8 relative z-10"
+            class="sticky top-0 z-40 container mx-auto px-4 sm:px-6 py-4 sm:py-6"
         >
             <nav
-                class="flex flex-col sm:flex-row justify-between items-center backdrop-blur-xl bg-white/10 rounded-2xl p-4 border border-white/20 shadow-2xl gap-4 sm:gap-0"
+                class="glass rounded-2xl p-4 border border-white/20 shadow-2xl flex flex-col sm:flex-row justify-between items-center gap-3"
             >
                 <h1
-                    class="text-xl sm:text-2xl font-bold text-white text-center sm:text-left"
+                    class="text-xl sm:text-2xl font-semibold tracking-tight text-white text-center sm:text-left"
                 >
                     Sergei Saliukov
                 </h1>
                 <div
-                    class="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-6"
+                    class="flex flex-wrap justify-center sm:justify-end gap-2 sm:gap-4"
                 >
                     <a
                         href="#apps"
                         @click="smoothScrollTo($event, 'apps')"
-                        class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
+                        class="text-white/80 hover:text-white transition-all duration-200 hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
                     >
                         Apps
                     </a>
                     <a
                         href="#frameworks"
                         @click="smoothScrollTo($event, 'frameworks')"
-                        class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
+                        class="text-white/80 hover:text-white transition-all duration-200 hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
                     >
                         Frameworks
                     </a>
                     <a
                         href="#platforms"
                         @click="smoothScrollTo($event, 'platforms')"
-                        class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
+                        class="text-white/80 hover:text-white transition-all duration-200 hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
                     >
                         Platforms
                     </a>
                     <a
                         href="#contact"
                         @click="smoothScrollTo($event, 'contact')"
-                        class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
+                        class="text-white/80 hover:text-white transition-all duration-200 hover:bg-white/10 px-3 sm:px-4 py-2 rounded-lg text-sm sm:text-base"
                     >
                         Contact
                     </a>
@@ -79,18 +79,18 @@
                     <u>{{ experienceYears }} years</u> of experience building
                     apps that users love
                 </p>
-                <div class="flex justify-center space-x-4">
+                <div class="flex justify-center gap-3">
                     <a
                         href="#apps"
                         @click="smoothScrollTo($event, 'apps')"
-                        class="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm"
+                        class="bg-gradient-to-r from-cyan-500 to-indigo-500 text-white px-8 py-3 rounded-xl font-medium hover:from-cyan-400 hover:to-indigo-400 transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                         View My Work
                     </a>
                     <a
                         href="#contact"
                         @click="smoothScrollTo($event, 'contact')"
-                        class="backdrop-blur-xl bg-white/10 border border-white/30 text-white px-8 py-3 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
+                        class="glass border border-white/30 text-white px-8 py-3 rounded-xl font-medium hover:bg-white/15 transition-all duration-200 shadow-lg hover:shadow-xl"
                     >
                         Get In Touch
                     </a>
@@ -101,7 +101,7 @@
         <!-- Apps Section -->
         <section id="apps" class="container mx-auto px-6 py-16 relative z-10">
             <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-white mb-4">
+                <h3 class="text-3xl font-semibold tracking-tight text-white mb-4">
                     Featured Apps
                 </h3>
                 <div
@@ -121,7 +121,7 @@
             class="container mx-auto px-6 py-16 relative z-10"
         >
             <div class="text-center mb-12">
-                <h3 class="text-3xl font-bold text-white mb-4">My Libraries</h3>
+                <h3 class="text-3xl font-semibold tracking-tight text-white mb-4">My Libraries</h3>
                 <div
                     class="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto rounded-full"
                 ></div>
@@ -144,7 +144,7 @@
                     class="backdrop-blur-xl bg-white/5 rounded-3xl p-12 border border-white/20 shadow-2xl"
                 >
                     <div class="text-center mb-12">
-                        <h3 class="text-3xl font-bold text-white mb-4">
+                        <h3 class="text-3xl font-semibold tracking-tight text-white mb-4">
                             Development Platforms
                         </h3>
                         <div

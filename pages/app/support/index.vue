@@ -9,12 +9,12 @@
 
     <div class="relative z-10">
       <!-- Header -->
-      <header class="container mx-auto px-6 py-8">
-        <nav class="flex justify-between items-center backdrop-blur-xl bg-white/10 rounded-2xl p-4 border border-white/20 shadow-2xl">
+      <header class="sticky top-0 z-40 container mx-auto px-6 py-6">
+        <nav class="glass rounded-2xl p-4 border border-white/20 shadow-2xl flex items-center justify-between">
           <h1 class="text-2xl font-bold text-white">Support</h1>
           <a
             href="/"
-            class="text-white/80 hover:text-white transition-all duration-300 hover:backdrop-blur-sm hover:bg-white/10 px-4 py-2 rounded-lg"
+            class="text-white/80 hover:text-white transition-all duration-200 hover:bg-white/10 px-4 py-2 rounded-lg"
           >
             ← Back to Portfolio
           </a>
@@ -26,7 +26,7 @@
         <!-- Hero section -->
         <section class="text-center mb-20">
           <div class="max-w-4xl mx-auto backdrop-blur-xl bg-white/5 rounded-3xl p-12 border border-white/20 shadow-2xl">
-            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h2 class="text-5xl md:text-6xl font-semibold tracking-tight text-white mb-6 leading-tight">
               How can I help you?
             </h2>
             <p class="text-xl text-white/80 leading-relaxed">
@@ -64,7 +64,7 @@
         <!-- Contact options -->
         <section class="max-w-4xl mx-auto">
           <div class="text-center mb-12">
-            <h3 class="text-3xl font-bold text-white mb-4">
+            <h3 class="text-3xl font-semibold tracking-tight text-white mb-4">
               Get in Touch
             </h3>
             <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>

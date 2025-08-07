@@ -1,6 +1,6 @@
 <template>
   <div
-    class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105 flex flex-col relative"
+    class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105 flex flex-col relative hover-lift"
   >
     <!-- GitHub Button - Top Right Corner -->
     <a
@@ -8,7 +8,7 @@
       :href="`https://github.com/${framework.link}`"
       target="_blank"
       rel="noopener noreferrer"
-      class="absolute top-4 right-4 text-white p-3 rounded-lg transition-all duration-200 flex items-center gap-1 hover:scale-105 z-10"
+      class="absolute top-4 right-4 text-white p-3 rounded-lg transition-all duration-200 flex items-center gap-1 hover:scale-105 z-10 focus:outline-none"
     >
       <svg
         class="w-6 h-6"
@@ -23,7 +23,7 @@
 
     <div class="flex items-center mb-4">
       <div
-        class="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold text-white mr-4 backdrop-blur-sm border border-white/30 shadow-lg group-hover:scale-110 transition-transform duration-300"
+        class="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold text-white mr-4 backdrop-blur-sm border border-white/30 shadow-lg group-hover:scale-110 transition-transform duration-300 ring-1 ring-white/25"
         :style="{
           background: `linear-gradient(135deg, ${framework.color}80, ${framework.color}40)`,
         }"
@@ -31,7 +31,7 @@
         {{ framework.icon }}
       </div>
       <div class="flex-1 pr-12">
-        <h4 class="text-xl font-semibold text-white">
+        <h4 class="text-xl font-semibold tracking-tight text-white">
           {{ framework.name }}
         </h4>
         <p class="text-white/70">

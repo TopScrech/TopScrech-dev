@@ -3,10 +3,10 @@
     class="backdrop-blur-xl bg-white/10 rounded-2xl shadow-2xl hover:shadow-3xl hover:bg-white/15 transition-all duration-500 p-6 border border-white/20 group hover:scale-105 flex flex-col"
     @mouseleave="handleMouseLeave"
   >
-    <div class="flex items-center justify-between mb-4">
+    <div class="flex items-start justify-between mb-4">
       <div class="flex items-center flex-1">
         <div
-          class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden"
+          class="w-16 h-16 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden ring-1 ring-white/25"
         >
           <img
             :src="`/icons/${app.iconName}.webp`"
@@ -15,7 +15,7 @@
           />
         </div>
         <div class="flex-1">
-          <h4 class="text-xl font-semibold text-white">
+          <h4 class="text-xl font-semibold tracking-tight text-white">
             {{ app.name }}
           </h4>
           <p class="text-white/70">{{ app.category }}</p>
@@ -26,7 +26,7 @@
       <div class="relative self-start" v-if="hasDownloadLinks">
         <button
           @click="toggleDropdown"
-          class="backdrop-blur-sm bg-white/20 hover:bg-white/30 text-white p-2 rounded-lg transition-all duration-200 border border-white/30 flex items-center gap-1"
+          class="glass text-white p-2 rounded-lg transition-all duration-200 border border-white/30 flex items-center gap-1 focus:outline-none"
           :class="{ 'bg-white/30': isDropdownOpen }"
         >
           <!-- SF Symbol-like square.and.arrow.down icon -->
