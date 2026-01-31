@@ -72,7 +72,7 @@ export const apps = [
     name: "CI/CD",
     category: "Dev Tools",
     description:
-      "Xcode Cloud manager",
+      "Xcode Cloud & Coolify manager",
     iconName: "ci-cd",
     technologies: [
       "SwiftData",
