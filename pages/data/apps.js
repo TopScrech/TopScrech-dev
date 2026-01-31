@@ -12,7 +12,7 @@ export const apps = [
       "Keychain"
     ],
     downloads: {
-      appStore: 1234567890,
+      appStore: 1639409934,
       // altStore: true,
       // github: "TopScrech/Bisquit-Host"
     }
