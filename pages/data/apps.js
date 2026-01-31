@@ -31,7 +31,7 @@ export const apps = [
       "Core Location",
     ],
     downloads: {
-      appStore: 1234567891,
+      appStore: 6624303981,
       altStore: true,
       // github: "TopScrech/Device-Specs"
     },
@@ -63,7 +63,7 @@ export const apps = [
       "Network"
     ],
     downloads: {
-      appStore: 1234567892,
+      appStore: 6740754881,
       // altStore: true,
       github: "TopScrech/MC-Stats"
     }
