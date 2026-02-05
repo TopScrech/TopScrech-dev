@@ -153,6 +153,165 @@
             </div>
           </div>
         </section>
+
+        <!-- Versions -->
+        <section class="max-w-6xl mx-auto mt-20">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-semibold tracking-tight text-white mb-4">
+              Version Library
+            </h3>
+            <div class="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-400 mx-auto rounded-full"></div>
+            <p class="text-white/75 mt-4">
+              Version metadata is loaded once and kept in-memory while you navigate
+            </p>
+          </div>
+
+          <div
+            v-if="versionsError"
+            class="backdrop-blur-xl bg-red-950/35 rounded-2xl p-6 border border-red-300/30 text-red-100 text-center"
+          >
+            {{ versionsError }}
+          </div>
+
+          <div
+            v-else-if="isLoadingVersions"
+            class="backdrop-blur-xl bg-white/10 rounded-2xl p-6 border border-white/20 text-white/80 text-center"
+          >
+            Loading versions
+          </div>
+
+          <div v-else>
+            <article
+              v-if="selectedVersionContext"
+              class="backdrop-blur-xl bg-white/10 rounded-3xl p-6 sm:p-8 border border-white/20 shadow-2xl"
+            >
+              <button
+                class="mb-5 rounded-full border border-white/35 bg-white/12 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition-colors"
+                @click="goBackToVersionList"
+              >
+                ← Back to version list
+              </button>
+
+              <div class="flex flex-col sm:flex-row sm:items-center gap-5 mb-6">
+                <img
+                  :src="selectedVersionContext.iconURL"
+                  :alt="`${selectedVersionContext.appName} icon`"
+                  class="w-16 h-16 rounded-2xl object-cover border border-white/25 bg-white/10"
+                />
+                <div>
+                  <p class="text-xs uppercase tracking-[0.16em] text-orange-200">
+                    {{ selectedVersionContext.sectionName }}
+                  </p>
+                  <h4 class="text-2xl font-semibold text-white">
+                    {{ selectedVersionContext.appName }} {{ selectedVersionContext.version.version }}
+                  </h4>
+                  <p class="text-white/70 text-sm mt-1">
+                    Build {{ selectedVersionContext.version.buildVersion || "n/a" }} ·
+                    {{ formatDate(selectedVersionContext.version.date) }} ·
+                    {{ formatSize(selectedVersionContext.version.size) }}
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl border border-white/20 bg-white/8 p-4">
+                  <p class="text-xs uppercase tracking-[0.12em] text-white/60 mb-2">
+                    Minimum OS
+                  </p>
+                  <p class="text-white">
+                    {{ selectedVersionContext.version.minOSVersion || "n/a" }}
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/20 bg-white/8 p-4">
+                  <p class="text-xs uppercase tracking-[0.12em] text-white/60 mb-2">
+                    Download
+                  </p>
+                  <a
+                    :href="selectedVersionContext.version.downloadURL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-amber-200 break-all hover:text-amber-100"
+                  >
+                    {{ selectedVersionContext.version.downloadURL }}
+                  </a>
+                </div>
+              </div>
+
+              <div
+                v-if="selectedVersionContext.version.localizedDescription"
+                class="rounded-2xl border border-white/20 bg-white/8 p-4 mt-4"
+              >
+                <p class="text-xs uppercase tracking-[0.12em] text-white/60 mb-2">
+                  Notes
+                </p>
+                <p class="text-white/85">
+                  {{ selectedVersionContext.version.localizedDescription }}
+                </p>
+              </div>
+            </article>
+
+            <div v-else class="space-y-8">
+              <article
+                v-for="section in versionSections"
+                :key="section.id"
+                class="backdrop-blur-xl bg-white/8 rounded-3xl p-6 border border-white/20 shadow-2xl"
+              >
+                <div class="flex items-center justify-between gap-3 mb-5">
+                  <h4 class="text-xl font-semibold text-white">
+                    {{ section.name }}
+                  </h4>
+                  <span class="text-xs uppercase tracking-[0.12em] text-white/60">
+                    {{ section.totalVersions }} versions
+                  </span>
+                </div>
+
+                <div class="space-y-5">
+                  <div
+                    v-for="app in section.apps"
+                    :key="app.id"
+                    class="rounded-2xl border border-white/15 bg-white/8 p-4"
+                  >
+                    <div class="flex items-center gap-3 mb-4">
+                      <img
+                        :src="app.iconURL"
+                        :alt="`${app.name} icon`"
+                        class="w-10 h-10 rounded-xl object-cover border border-white/25 bg-white/10"
+                      />
+                      <div>
+                        <h5 class="text-white font-semibold">{{ app.name }}</h5>
+                        <p class="text-white/60 text-xs">{{ app.bundleIdentifier }}</p>
+                      </div>
+                    </div>
+
+                    <div class="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                      <button
+                        v-for="version in app.versions"
+                        :key="version.id"
+                        class="text-left rounded-2xl border border-white/20 bg-white/8 p-3 hover:bg-white/15 transition-colors"
+                        @click="openVersion(app.id, version.id)"
+                      >
+                        <div class="flex items-center gap-2 mb-2">
+                          <img
+                            :src="version.iconURL"
+                            :alt="`${app.name} version icon`"
+                            class="w-7 h-7 rounded-md object-cover border border-white/20 bg-white/10"
+                          />
+                          <p class="text-white font-semibold">v{{ version.version }}</p>
+                        </div>
+                        <p class="text-white/70 text-xs">
+                          Build {{ version.buildVersion || "n/a" }}
+                        </p>
+                        <p class="text-white/60 text-xs mt-1">
+                          {{ formatDate(version.date) }} · {{ formatSize(version.size) }}
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
       </main>
 
       <!-- Footer -->
@@ -171,6 +330,187 @@
 
 <script setup>
 const currentYear = new Date().getFullYear();
+const route = useRoute();
+const router = useRouter();
+
+const altStoreSource = useState("alt-store-source", () => null);
+const isLoadingVersions = ref(false);
+const versionsError = ref("");
+
+const ensureAltStoreSource = async () => {
+  if (altStoreSource.value) {
+    return;
+  }
+
+  isLoadingVersions.value = true;
+  versionsError.value = "";
+
+  try {
+    altStoreSource.value = await $fetch("/alt-store/source.json");
+  } catch {
+    versionsError.value = "Failed to load versions JSON";
+  } finally {
+    isLoadingVersions.value = false;
+  }
+};
+
+await ensureAltStoreSource();
+
+const createVersionId = (appId, version, index) =>
+  `${appId}:${version.version || "unknown"}:${version.buildVersion || "na"}:${index}`;
+
+const sectionSource = computed(() => {
+  const source = altStoreSource.value;
+  if (!source) {
+    return [];
+  }
+
+  const sourceApps = Array.isArray(source.apps) ? source.apps : [];
+  const appsByBundleId = Object.fromEntries(
+    sourceApps.map((app) => [app.bundleIdentifier, app])
+  );
+
+  if (Array.isArray(source.sections) && source.sections.length > 0) {
+    return source.sections.map((section, index) => ({
+      id: section.id || `section-${index}`,
+      name: section.name || section.title || `Section ${index + 1}`,
+      apps: Array.isArray(section.apps)
+        ? section.apps
+            .map((appEntry) => {
+              if (typeof appEntry === "string") {
+                return appsByBundleId[appEntry] || null;
+              }
+              return appEntry;
+            })
+            .filter(Boolean)
+        : []
+    }));
+  }
+
+  return [
+    {
+      id: "apps",
+      name: "Apps",
+      apps: sourceApps
+    }
+  ];
+});
+
+const versionSections = computed(() =>
+  sectionSource.value
+    .map((section) => {
+      const apps = section.apps
+        .map((app) => {
+          const appId = app.bundleIdentifier || app.name || "unknown-app";
+          const appVersions = Array.isArray(app.versions)
+            ? app.versions.map((version, index) => ({
+                ...version,
+                id: createVersionId(appId, version, index),
+                iconURL: app.iconURL || altStoreSource.value?.iconURL || ""
+              }))
+            : [];
+
+          return {
+            id: appId,
+            name: app.name || appId,
+            bundleIdentifier: app.bundleIdentifier || "n/a",
+            iconURL: app.iconURL || altStoreSource.value?.iconURL || "",
+            versions: appVersions
+          };
+        })
+        .filter((app) => app.versions.length > 0);
+
+      return {
+        id: section.id,
+        name: section.name,
+        apps,
+        totalVersions: apps.reduce((total, app) => total + app.versions.length, 0)
+      };
+    })
+    .filter((section) => section.totalVersions > 0)
+);
+
+const selectedAppId = computed(() =>
+  typeof route.query.app === "string" ? route.query.app : ""
+);
+const selectedVersionId = computed(() =>
+  typeof route.query.version === "string" ? route.query.version : ""
+);
+
+const selectedVersionContext = computed(() => {
+  if (!selectedAppId.value || !selectedVersionId.value) {
+    return null;
+  }
+
+  for (const section of versionSections.value) {
+    const app = section.apps.find((item) => item.id === selectedAppId.value);
+    if (!app) {
+      continue;
+    }
+
+    const version = app.versions.find((item) => item.id === selectedVersionId.value);
+    if (!version) {
+      continue;
+    }
+
+    return {
+      sectionName: section.name,
+      appName: app.name,
+      iconURL: version.iconURL || app.iconURL,
+      version
+    };
+  }
+
+  return null;
+});
+
+const openVersion = async (appId, versionId) => {
+  await router.push({
+    query: {
+      ...route.query,
+      app: appId,
+      version: versionId
+    }
+  });
+};
+
+const goBackToVersionList = async () => {
+  const nextQuery = { ...route.query };
+  delete nextQuery.app;
+  delete nextQuery.version;
+
+  await router.push({ query: nextQuery });
+};
+
+const formatDate = (value) => {
+  if (!value) {
+    return "Unknown date";
+  }
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return "Unknown date";
+  }
+
+  return date.toLocaleDateString();
+};
+
+const formatSize = (size) => {
+  if (!Number.isFinite(size)) {
+    return "Unknown size";
+  }
+
+  const units = ["B", "KB", "MB", "GB"];
+  let amount = size;
+  let unitIndex = 0;
+
+  while (amount >= 1024 && unitIndex < units.length - 1) {
+    amount /= 1024;
+    unitIndex += 1;
+  }
+
+  return `${amount.toFixed(unitIndex === 0 ? 0 : 1)} ${units[unitIndex]}`;
+};
 
 definePageMeta({
   layout: false,
