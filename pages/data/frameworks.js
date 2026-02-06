@@ -1,7 +1,7 @@
 export const frameworks = [
     {
         name: "ScrechKit",
-        category: "UI Framework",
+        category: "SwiftUI tweaks",
         description: "Taking Swift & SwiftUI a step further",
         icon: "SK",
         color: "#FF6B6B",
@@ -10,7 +10,7 @@ export const frameworks = [
     },
     {
         name: "QuickLooking",
-        category: "Files",
+        category: "File Preview",
         description: "Multi-platform wrapper around QuickLook for easier file viewing",
         icon: "QL",
         color: "#4ECDC4",
@@ -43,15 +43,6 @@ export const frameworks = [
         color: "#FECA57",
         technologies: ["SafariServices", "SwiftUI"],
         link: "TopScrech/SafariCover"
-    },
-    {
-        name: "SPerms",
-        category: "Privacy",
-        description: "SwiftPermissions made better",
-        icon: "SP",
-        color: "#FF9FF3",
-        technologies: ["SwiftPermissions"],
-        link: "TopScrech/SPerms"
     },
     {
         name: "HealthyKit",
