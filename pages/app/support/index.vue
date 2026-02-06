@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-amber-50 px-5 py-8 text-stone-900 sm:px-6 sm:py-10">
+  <div class="min-h-screen bg-amber-100 px-5 py-8 text-stone-900 sm:px-6 sm:py-10">
     <div class="mx-auto max-w-6xl space-y-6">
       <header class="block-card bg-lime-300 p-6 sm:p-8">
         <div class="flex flex-wrap items-center justify-between gap-4">
