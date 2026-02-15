@@ -38,6 +38,26 @@
               {{ tech }}
             </span>
           </div>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <a
+              v-if="app.downloads?.appStore"
+              :href="appStoreUrl(app)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full border-2 border-stone-900 bg-white px-3 py-1 text-xs font-black hover:bg-stone-900 hover:text-white"
+            >
+              App Store
+            </a>
+            <a
+              v-if="app.downloads?.github"
+              :href="githubUrl(app)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full border-2 border-stone-900 bg-white px-3 py-1 text-xs font-black hover:bg-stone-900 hover:text-white"
+            >
+              GitHub
+            </a>
+          </div>
         </article>
       </section>
 
@@ -50,7 +70,14 @@
               :key="framework.name"
               class="rounded-xl border-2 border-stone-900 bg-rose-100 px-3 py-2"
             >
-              {{ framework.name }} · {{ framework.category }}
+              <a
+                :href="frameworkUrl(framework)"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block hover:underline"
+              >
+                {{ framework.name }} · {{ framework.category }}
+              </a>
             </li>
           </ul>
         </article>
@@ -82,6 +109,10 @@ import { currentYear } from "./data/currentYear.js";
 const featuredApps = apps.slice(0, 6);
 const featuredFrameworks = frameworks.slice(0, 6);
 const platformNames = platforms.map((platform) => platform.name);
+
+const appStoreUrl = (app) => `https://apps.apple.com/app/id${app.downloads.appStore}`;
+const githubUrl = (app) => `https://github.com/${app.downloads.github}`;
+const frameworkUrl = (framework) => `https://github.com/${framework.link}`;
 
 const tileClass = (index) => {
   const classes = [
