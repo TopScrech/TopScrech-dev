@@ -27,7 +27,18 @@
           :class="tileClass(index)"
         >
           <p class="text-xs font-black uppercase tracking-[0.11em]">{{ app.category }}</p>
-          <h2 class="mt-1 text-2xl font-black">{{ app.name }}</h2>
+          <h2 class="mt-1 text-2xl font-black">
+            <a
+              v-if="projectUrl(app)"
+              :href="projectUrl(app)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline"
+            >
+              {{ app.name }}
+            </a>
+            <span v-else>{{ app.name }}</span>
+          </h2>
           <p class="mt-2 text-sm font-medium">{{ app.description }}</p>
           <div class="mt-3 flex flex-wrap gap-2">
             <span
@@ -109,6 +120,13 @@ import { currentYear } from "./data/currentYear.js";
 const featuredApps = apps.slice(0, 6);
 const featuredFrameworks = frameworks.slice(0, 6);
 const platformNames = platforms.map((platform) => platform.name);
+
+const projectUrl = (app) => {
+  if (app.downloads?.github) return `https://github.com/${app.downloads.github}`;
+  if (app.downloads?.appStore) return `https://apps.apple.com/app/id${app.downloads.appStore}`;
+  if (app.downloads?.altStore) return "altstore://source?url=https://topscrech.dev/alt-store/source.json";
+  return "";
+};
 
 const appStoreUrl = (app) => `https://apps.apple.com/app/id${app.downloads.appStore}`;
 const githubUrl = (app) => `https://github.com/${app.downloads.github}`;
