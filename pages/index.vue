@@ -104,7 +104,6 @@
               {{ platform }}
             </span>
           </div>
-          <p class="mt-5 text-sm font-bold">© {{ currentYear }} Sergei Saliukov</p>
         </article>
       </section>
     </div>

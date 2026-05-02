@@ -105,11 +105,6 @@
         </a>
       </section>
 
-      <footer class="block-card bg-orange-300 p-5 text-center">
-        <p class="text-sm font-black">
-          © {{ currentYear }} Sergei Saliukov · Here to help with your iOS projects
-        </p>
-      </footer>
     </div>
   </div>
 </template>
