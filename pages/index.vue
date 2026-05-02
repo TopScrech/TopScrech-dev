@@ -7,7 +7,7 @@
             <p class="text-xs font-black uppercase tracking-[0.2em] text-stone-800">TopScrech</p>
             <h1 class="text-4xl font-black tracking-tight sm:text-6xl">Sergei Saliukov</h1>
             <p class="mt-2 max-w-2xl text-sm font-semibold sm:text-base">
-              iOS developer building open-source frameworks, practical tools, and polished Apple platform apps
+              iOS developer building open-source apps, libraries and more!
             </p>
           </div>
           <NuxtLink
