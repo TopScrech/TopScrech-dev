@@ -4,7 +4,7 @@
       <header class="block-card bg-lime-300 p-6 sm:p-8">
         <div class="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p class="text-xs font-black uppercase tracking-[0.2em] text-stone-800">TopScrech</p>
+            <p class="text-xs font-black tracking-[0.2em] text-stone-800">TopScrech</p>
             <h1 class="text-4xl font-black tracking-tight sm:text-5xl">App Support</h1>
             <p class="mt-2 max-w-3xl text-sm font-semibold sm:text-base">
               Direct support for my iOS apps, libraries, and AltStore releases
@@ -14,7 +14,7 @@
             to="/"
             class="rounded-full border-4 border-stone-900 bg-amber-100 px-4 py-2 text-sm font-black shadow-[4px_4px_0_#111]"
           >
-            Back to Portfolio
+            View portfolio
           </NuxtLink>
         </div>
       </header>

@@ -4,18 +4,12 @@
       <header class="mb-8 rounded-3xl border-4 border-stone-900 bg-lime-300 p-6 shadow-[8px_8px_0_#111] sm:p-8">
         <div class="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p class="text-xs font-black uppercase tracking-[0.2em] text-stone-800">TopScrech</p>
+            <p class="text-xs font-black tracking-[0.2em] text-stone-800">TopScrech</p>
             <h1 class="text-4xl font-black tracking-tight sm:text-6xl">Sergei Saliukov</h1>
             <p class="mt-2 max-w-2xl text-sm font-semibold sm:text-base">
               iOS developer building open-source apps, libraries and more!
             </p>
           </div>
-          <NuxtLink
-            to="/app/support"
-            class="rounded-full border-4 border-stone-900 bg-amber-100 px-4 py-2 text-sm font-black shadow-[4px_4px_0_#111]"
-          >
-            App Support
-          </NuxtLink>
         </div>
       </header>
 
