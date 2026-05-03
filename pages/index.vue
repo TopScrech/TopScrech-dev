@@ -71,7 +71,7 @@
 
       <section class="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <article
-          v-for="(app, index) in featuredApps"
+          v-for="(app, index) in apps"
           :key="app.name"
           class="block-card relative p-4"
           :class="tileClass(index)"
@@ -180,7 +180,6 @@ import { frameworks } from "./data/frameworks.js";
 import { platforms } from "./data/platforms.js";
 import { currentYear } from "./data/currentYear.js";
 
-const featuredApps = apps.slice(0, 6);
 const featuredFrameworks = frameworks.slice(0, 6);
 const platformNames = platforms.map((platform) => platform.name);
 

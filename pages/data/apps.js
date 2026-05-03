@@ -37,18 +37,6 @@ export const apps = [
     },
   },
   {
-    name: "DickPic",
-    category: "Photography",
-    description:
-      "Advanced image processing app for detecting sensitive images & videos in your media library",
-    iconName: "dickpic",
-    technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
-    downloads: {
-      // altStore: true,
-      github: "TopScrech/DickPic"
-    }
-  },
-  {
     name: "MC Stats",
     category: "Gaming",
     description:
@@ -143,6 +131,18 @@ export const apps = [
     downloads: {
       appStore: 6502962295,
       // github: "TopScrech/XProj"
+    }
+  },
+  {
+    name: "DickPic",
+    category: "Photography",
+    description:
+      "Advanced image processing app for detecting sensitive images & videos in your media library",
+    iconName: "dickpic",
+    technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
+    downloads: {
+      // altStore: true,
+      github: "TopScrech/DickPic"
     }
   },
 ];
