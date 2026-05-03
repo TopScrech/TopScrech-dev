@@ -77,9 +77,29 @@
           :class="tileClass(index)"
         >
           <div
-            v-if="app.downloads?.appStore || app.downloads?.github"
+            v-if="app.downloads?.web || app.downloads?.appStore || app.downloads?.github"
             class="absolute right-4 top-4 flex gap-2"
           >
+            <a
+              v-if="app.downloads?.web"
+              :href="webUrl(app)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon-link"
+              :aria-label="`${app.name} website`"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 0 20M12 2a15.3 15.3 0 0 0 0 20" />
+              </svg>
+            </a>
             <a
               v-if="app.downloads?.github"
               :href="githubUrl(app)"
@@ -119,8 +139,8 @@
               </svg>
             </a>
           </div>
-          <p class="pr-24 text-xs font-black uppercase tracking-[0.11em]">{{ app.category }}</p>
-          <h2 class="mt-1 pr-24 text-2xl font-black">
+          <p class="pr-36 text-xs font-black uppercase tracking-[0.11em]">{{ app.category }}</p>
+          <h2 class="mt-1 pr-36 text-2xl font-black">
             {{ app.name }}
           </h2>
           <p class="mt-2 text-sm font-medium">{{ app.description }}</p>
@@ -185,6 +205,7 @@ const platformNames = platforms.map((platform) => platform.name);
 
 const appStoreUrl = (app) => `https://apps.apple.com/app/id${app.downloads.appStore}`;
 const githubUrl = (app) => `https://github.com/${app.downloads.github}`;
+const webUrl = (app) => app.downloads.web;
 const frameworkUrl = (framework) => `https://github.com/${framework.link}`;
 
 const tileClass = (index) => {

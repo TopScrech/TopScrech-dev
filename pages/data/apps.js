@@ -1,5 +1,20 @@
 export const apps = [
   {
+    name: "FanControl",
+    category: "Utilities",
+    description: "Fan control for macOS",
+    iconName: "fancontrol",
+    technologies: [
+      "SMC",
+      "IOKit",
+      "LaunchAtLogin"
+    ],
+    downloads: {
+      web: "https://fancontrol.dev",
+      github: "TopScrech/FanControl"
+    }
+  },
+  {
     name: "Bisquit.Host",
     category: "Pterodactyl Client",
     description: "Powerful server management tool for Pterodactyl panel",
@@ -116,21 +131,6 @@ export const apps = [
     downloads: {
       appStore: 6636466492,
       // github: "TopScrech/Ram-Usage"
-    }
-  },
-  {
-    name: "XProj",
-    category: "Dev Tools",
-    description:
-      "Organize your Xcode projects",
-    iconName: "xproj",
-    technologies: [
-      "WidgetKit",
-      "LaunchAtLogin"
-    ],
-    downloads: {
-      appStore: 6502962295,
-      // github: "TopScrech/XProj"
     }
   },
   {
