@@ -89,6 +89,34 @@ export const apps = [
     }
   },
   {
+    name: "Folder Preview",
+    category: "Utilities",
+    description:
+      "macOS Quick Look extension for previewing folders",
+    iconName: "folder-preview",
+    technologies: [
+      "QuickLook",
+      "App Extension"
+    ],
+    downloads: {
+      appStore: 6748542679
+    }
+  },
+  {
+    name: "Focus Mode for YouTube",
+    category: "Productivity",
+    description:
+      "Hide YouTube shorts & other distractions",
+    iconName: "focus-mode-for-youtube",
+    technologies: [
+      "Safari Extension",
+      "JavaScript"
+    ],
+    downloads: {
+      appStore: 6758026862
+    }
+  },
+  {
     name: "Disk Usage Widgets",
     category: "Utilities",
     description:
