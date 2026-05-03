@@ -168,7 +168,7 @@ export const apps = [
     description:
       "Analyze photo library for sensitive content",
     iconName: "dickpic",
-    technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
+    technologies: ["SensitiveContentAnalysis", "Photos", "QuickLook"],
     downloads: {
       // altStore: true,
       github: "TopScrech/DickPic"
