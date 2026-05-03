@@ -56,7 +56,7 @@ export const apps = [
     name: "MC Stats",
     category: "Gaming",
     description:
-      "Minecraft server statistics tracker with real-time player monitoring and analytics",
+      "Minecraft server statistics tracker with real-time player monitoring",
     iconName: "mc-stats",
     technologies: [
       "SwiftData",

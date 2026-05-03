@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-amber-100 px-5 py-8 text-stone-900 sm:px-6 sm:py-10">
     <div class="mx-auto max-w-6xl">
-      <header class="relative mb-8 rounded-3xl border-4 border-stone-900 bg-lime-300 p-6 shadow-[8px_8px_0_#111] sm:p-8">
+      <header class="relative mb-4 rounded-3xl border-4 border-stone-900 bg-lime-300 p-6 shadow-[8px_8px_0_#111] sm:p-8">
         <div class="absolute right-4 top-4 flex gap-2 sm:right-6 sm:top-6">
           <a
             href="https://t.me/TopScrech"
@@ -60,16 +60,16 @@
         </div>
         <div class="flex flex-wrap items-center justify-between gap-4">
           <div class="pt-12 sm:pt-0 sm:pr-36">
-            <p class="text-xs font-black tracking-[0.2em] text-stone-800">TopScrech</p>
-            <h1 class="text-4xl font-black tracking-tight sm:text-6xl">Sergei Saliukov</h1>
+            <p class="text-xs font-black tracking-[0.2em] text-stone-800">Sergei Saliukov</p>
+            <h1 class="text-4xl font-black tracking-tight sm:text-6xl">TopScrech</h1>
             <p class="mt-2 max-w-2xl text-sm font-semibold sm:text-base">
-              iOS developer building open-source apps, libraries and more!
+              iOS developer building open-source apps, libraries & more!
             </p>
           </div>
         </div>
       </header>
 
-      <section class="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <section class="mb-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <article
           v-for="(app, index) in apps"
           :key="app.name"
