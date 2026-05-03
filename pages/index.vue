@@ -74,7 +74,7 @@
           v-for="(app, index) in apps"
           :key="app.name"
           class="block-card relative flex min-h-40 flex-col p-4"
-          :class="tileClass(index)"
+          :class="tileClass(app, index)"
         >
           <div
             v-if="app.downloads?.web || app.downloads?.appStore || app.downloads?.github"
@@ -193,7 +193,18 @@ const githubUrl = (app) => `https://github.com/${app.downloads.github}`;
 const webUrl = (app) => app.downloads.web;
 const frameworkUrl = (framework) => `https://github.com/${framework.link}`;
 
-const tileClass = (index) => {
+const projectTileClasses = {
+  "Bisquit.Host": "bg-orange-300",
+  "CI/CD": "bg-sky-300",
+  "Pro Battery": "bg-green-300",
+  "Focus Mode for YouTube": "bg-red-300"
+};
+
+const tileClass = (app, index) => {
+  if (projectTileClasses[app.name]) {
+    return projectTileClasses[app.name];
+  }
+
   const classes = [
     "bg-emerald-300",
     "bg-amber-300",

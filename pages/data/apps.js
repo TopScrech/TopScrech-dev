@@ -144,7 +144,7 @@ export const apps = [
     ],
     downloads: {
       appStore: 6736841839,
-      // github: "TopScrech/Pro-Battery"
+      github: "TopScrech/Pro-Battery"
     }
   },
   {
@@ -159,7 +159,7 @@ export const apps = [
     ],
     downloads: {
       appStore: 6636466492,
-      // github: "TopScrech/Ram-Usage"
+      github: "TopScrech/Ram-Usage"
     }
   },
   {
