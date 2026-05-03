@@ -47,7 +47,7 @@ export const frameworks = [
     {
         name: "HealthyKit",
         category: "Health",
-        description: "HealthKit data types for macOS",
+        description: "HealthKit data types",
         icon: "HK",
         color: "#54A0FF",
         technologies: ["HealthKit", "Foundation"],

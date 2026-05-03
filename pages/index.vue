@@ -171,8 +171,11 @@
                 rel="noopener noreferrer"
                 class="inline-block hover:underline"
               >
-                {{ framework.name }} · {{ framework.category }}
+                {{ framework.name }}
               </a>
+              <p class="mt-1 text-stone-600">
+                {{ framework.description }}
+              </p>
             </li>
           </ul>
         </article>
