@@ -27,6 +27,7 @@ export const apps = [
       "Keychain"
     ],
     downloads: {
+      web: "https://bisquit.host",
       appStore: 1639409934,
       // altStore: true,
       // github: "TopScrech/Bisquit-Host"
