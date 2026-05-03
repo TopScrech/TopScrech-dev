@@ -148,7 +148,7 @@
             <span
               v-for="tech in app.technologies.slice(0, 3)"
               :key="`${app.name}-${tech}`"
-              class="rounded-full border-2 border-stone-900 bg-white px-2 py-1 text-xs font-black"
+              class="rounded-full border-2 border-stone-900 bg-yellow-100 px-3 py-1 text-sm font-black"
             >
               {{ tech }}
             </span>
@@ -156,7 +156,7 @@
         </article>
       </section>
 
-      <section class="grid gap-4 lg:grid-cols-2">
+      <section class="grid gap-4">
         <article class="block-card bg-rose-300 p-5">
           <h3 class="text-2xl font-black">Libraries</h3>
           <ul class="mt-3 grid gap-2 text-sm font-semibold">
@@ -176,19 +176,6 @@
             </li>
           </ul>
         </article>
-
-        <article class="block-card bg-orange-300 p-5">
-          <h3 class="text-2xl font-black">Platforms</h3>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span
-              v-for="platform in platformNames"
-              :key="platform"
-              class="rounded-full border-2 border-stone-900 bg-yellow-100 px-3 py-1 text-sm font-black"
-            >
-              {{ platform }}
-            </span>
-          </div>
-        </article>
       </section>
     </div>
   </div>
@@ -197,11 +184,9 @@
 <script setup>
 import { apps } from "./data/apps.js";
 import { frameworks } from "./data/frameworks.js";
-import { platforms } from "./data/platforms.js";
 import { currentYear } from "./data/currentYear.js";
 
 const featuredFrameworks = frameworks.slice(0, 6);
-const platformNames = platforms.map((platform) => platform.name);
 
 const appStoreUrl = (app) => `https://apps.apple.com/app/id${app.downloads.appStore}`;
 const githubUrl = (app) => `https://github.com/${app.downloads.github}`;
