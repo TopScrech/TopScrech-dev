@@ -33,7 +33,7 @@ export const apps = [
     downloads: {
       appStore: 6624303981,
       altStore: true,
-      // github: "TopScrech/Device-Specs"
+      github: "TopScrech/Device-Specs"
     },
   },
   {
@@ -81,7 +81,7 @@ export const apps = [
     downloads: {
       appStore: 6746098668,
       // altStore: true,
-      // github: "TopScrech/CI-CD"
+      github: "TopScrech/CI-CD"
     }
   },
   {
@@ -97,7 +97,7 @@ export const apps = [
     ],
     downloads: {
       appStore: 6504800979,
-      // github: "TopScrech/Disk-Usage-Widgets"
+      github: "TopScrech/Disk-Usage-Widgets"
     }
   },
   {
