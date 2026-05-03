@@ -110,7 +110,7 @@ export const apps = [
     iconName: "focus-mode-for-youtube",
     technologies: [
       "Safari Extension",
-      "JavaScript"
+      "JS"
     ],
     downloads: {
       appStore: 6758026862
