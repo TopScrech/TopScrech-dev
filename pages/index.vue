@@ -73,7 +73,7 @@
         <article
           v-for="(app, index) in apps"
           :key="app.name"
-          class="block-card relative p-4"
+          class="block-card relative flex min-h-48 flex-col p-4"
           :class="tileClass(index)"
         >
           <div
@@ -144,7 +144,8 @@
             {{ app.name }}
           </h2>
           <p class="mt-2 text-sm font-medium">{{ app.description }}</p>
-          <div class="mt-3 flex flex-wrap gap-2">
+          <div class="flex-1"></div>
+          <div class="mt-4 flex flex-wrap gap-2">
             <span
               v-for="tech in app.technologies.slice(0, 3)"
               :key="`${app.name}-${tech}`"
