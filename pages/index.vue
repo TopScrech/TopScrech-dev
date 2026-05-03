@@ -73,7 +73,7 @@
         <article
           v-for="(app, index) in apps"
           :key="app.name"
-          class="block-card relative flex min-h-48 flex-col p-4"
+          class="block-card relative flex min-h-40 flex-col p-4"
           :class="tileClass(index)"
         >
           <div
@@ -139,13 +139,12 @@
               </svg>
             </a>
           </div>
-          <p class="pr-36 text-xs font-black uppercase tracking-[0.11em]">{{ app.category }}</p>
-          <h2 class="mt-1 pr-36 text-2xl font-black">
+          <h2 class="pr-36 text-2xl font-black">
             {{ app.name }}
           </h2>
-          <p class="mt-2 text-sm font-medium">{{ app.description }}</p>
+          <p class="mt-1 text-sm font-medium">{{ app.description }}</p>
           <div class="flex-1"></div>
-          <div class="mt-4 flex flex-wrap gap-2">
+          <div class="mt-3 flex flex-wrap gap-2">
             <span
               v-for="tech in app.technologies.slice(0, 3)"
               :key="`${app.name}-${tech}`"
