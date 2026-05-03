@@ -37,7 +37,7 @@ export const apps = [
     name: "Device Specs",
     category: "Utilities",
     description:
-      "Comprehensive device information app showing detailed hardware and software specifications",
+      "Hardware & software device specs",
     iconName: "device-specs",
     technologies: [
       "CoreNFC",
@@ -112,7 +112,7 @@ export const apps = [
     iconName: "pro-battery",
     technologies: [
       "WidgetKit",
-      "IOKit.ps"
+      "IOKit"
     ],
     downloads: {
       appStore: 6736841839,
@@ -138,7 +138,7 @@ export const apps = [
     name: "DickPic",
     category: "Photography",
     description:
-      "Advanced image processing app for detecting sensitive images & videos in your media library",
+      "Analyze photo library for sensitive content",
     iconName: "dickpic",
     technologies: ["SensitiveContentAnalysis", "QuickLook", "Photos"],
     downloads: {
