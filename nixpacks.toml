@@ -6,4 +6,8 @@ nixPkgs = ["...", "bun"]
 [variables]
 NIXPACKS_NODE_VERSION = "22"
 
+[phases.build]
+cmds = ["bun run build"]
 
+[start]
+cmd = "bun run start"
