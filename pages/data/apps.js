@@ -10,7 +10,7 @@ export const apps = [
       "LaunchAtLogin"
     ],
     downloads: {
-      web: "https://fancontrol.dev",
+      web: "https://fancontrol.dev?source=topscrech-dev",
       github: "TopScrech/FanControl"
     }
   },
