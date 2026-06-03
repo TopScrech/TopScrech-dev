@@ -69,6 +69,19 @@
         </div>
       </header>
 
+      <section class="mb-4">
+        <article class="block-card bg-sky-300 p-5 sm:p-6">
+          <div class="flex flex-col gap-5">
+            <div class="max-w-3xl">
+              <h2 class="mt-1 text-3xl font-black sm:text-4xl">SaaS: Sergei as a Service</h2>
+              <p class="mt-3 max-w-2xl text-sm font-semibold sm:text-base">
+                Available for any types of collaboration
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
       <section class="mb-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         <article
           v-for="(app, index) in apps"
@@ -156,45 +169,16 @@
         </article>
       </section>
 
-      <section class="grid gap-4">
-        <article class="block-card bg-rose-300 p-5">
-          <h3 class="text-2xl font-black">Libraries</h3>
-          <ul class="mt-3 grid gap-2 text-sm font-semibold">
-            <li
-              v-for="framework in featuredFrameworks"
-              :key="framework.name"
-              class="rounded-xl border-2 border-stone-900 bg-rose-100 px-3 py-2"
-            >
-              <a
-                :href="frameworkUrl(framework)"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-block hover:underline"
-              >
-                {{ framework.name }}
-              </a>
-              <p class="mt-1 text-stone-600">
-                {{ framework.description }}
-              </p>
-            </li>
-          </ul>
-        </article>
-      </section>
     </div>
   </div>
 </template>
 
 <script setup>
 import { apps } from "./data/apps.js";
-import { frameworks } from "./data/frameworks.js";
-import { currentYear } from "./data/currentYear.js";
-
-const featuredFrameworks = frameworks.slice(0, 6);
 
 const appStoreUrl = (app) => `https://apps.apple.com/app/id${app.downloads.appStore}`;
 const githubUrl = (app) => `https://github.com/${app.downloads.github}`;
 const webUrl = (app) => app.downloads.web;
-const frameworkUrl = (framework) => `https://github.com/${framework.link}`;
 
 const projectTileClasses = {
   "Bisquit.Host": "bg-orange-300",
@@ -250,4 +234,5 @@ const tileClass = (app, index) => {
   color: #fff;
   transform: translateY(-1px);
 }
+
 </style>
