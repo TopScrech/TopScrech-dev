@@ -1,0 +1,16 @@
+.git
+node_modules
+.svelte-kit
+build
+dist
+.nuxt
+.output
+.nitro
+.data
+.cache
+.env
+.env.*
+**/.DS_Store
+*.log
+.idea
+.fleet

@@ -41,6 +41,15 @@ Preview the build with Vite locally
 bun run preview
 ```
 
+## Docker
+
+```bash
+docker build -t topscrech-dev .
+docker run --rm -p 3000:3000 -e ORIGIN=http://localhost:3000 topscrech-dev
+```
+
+Open `http://localhost:3000` and set `ORIGIN` to the public URL when deploying
+
 ## Project structure
 
 - `src/routes/+page.svelte`: portfolio at `/`
