@@ -1,6 +1,6 @@
 # TopScrech.dev
 
-Portfolio and app support site built with SvelteKit, Svelte 5, Tailwind CSS 4, and the [Bun adapter](https://github.com/gornostay25/svelte-adapter-bun)
+Portfolio and app support site built with SvelteKit
 
 ## Setup
 
