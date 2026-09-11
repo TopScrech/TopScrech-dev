@@ -1,4 +1,6 @@
-export const apps = [
+import type { App } from "./app";
+
+export const apps: App[] = [
   {
     name: "FanControl",
     category: "Utilities",
